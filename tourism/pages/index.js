@@ -8,6 +8,7 @@ import Input from '../components/InputComponent'
 import Map from '../components/MapComponent'
 import Info from '../components/InfoComponent'
 import Header from '../components/Header'
+import Agriculture from '../components/Agriculture'
 import AppContext from '../components/AppContext'
 
 export default function Home() {
@@ -61,7 +62,8 @@ export default function Home() {
       <main className={styles.maingrid}>
         <Map/>
         <Info/>
-      </main>
+      </main>      
+      <Agriculture/>
     </AppContext.Provider>
   )
 }
