@@ -1,0 +1,90 @@
+.speechContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.searchContainer{    
+    width: 40%;
+    display: grid;
+    grid-template-columns: 20fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 0.2rem 0.6rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.inputBox {
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background-color: white !important;
+}
+
+.searchBarBtnsContainer {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBarBtn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    font-size: 0.8rem;
+}
+
+.sendBtn {
+    font-size: 1.8rem;
+    padding-left: 2px;
+}
+
+.micContainer{
+    display: grid;
+    place-items: center;
+    background: black;
+    color: white;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    animation: blink 2s ease-in infinite;
+}
+
+@keyframes blink {
+    50%{
+        border: 10px transparent black;
+    }
+}
+
+.micContainer *{
+    color: white;
+    font-size: 1.6rem;
+}
+
+.searchBarBtn[disabled="true"] {
+    display: none;
+}

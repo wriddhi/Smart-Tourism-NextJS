@@ -1,0 +1,112 @@
+@import url('http://fonts.cdnfonts.com/css/glacial-indifference-2');
+
+.card {
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 5px 2px #eaeaea;
+    border: 1px solid hsl(0, 0%, 93%);
+    border-radius: 10px;
+    transition: color 0.15s ease;
+    user-select: none;
+
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+  
+.card * {
+    font-family: 'Glacial Indifference', sans-serif;
+    color: #3a3a3a;
+    font-size: 1.5rem;
+}
+  
+.card p {
+    line-height: 1.5;
+}
+
+.warm{
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../public/warm.jpg');
+    background-position: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cold {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url('../public/cold.jpg');
+    background-position: 0 -200px;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cold::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 40%);
+}
+
+.warm::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 70%);
+}
+
+.small {
+    color: rgb(139, 139, 139);
+    /* font-weight: bold; */
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
+}
+
+.mid{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.large {
+    font-size: 3rem;
+    padding-bottom: 1.2rem;
+}
+
+.emptycard {
+    overflow: hidden;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 0 5px 2px #eaeaea;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    transition: color 0.15s ease;
+    user-select: none ;
+
+    display: grid;
+    place-items: center;
+}
+
+.emptycard *{
+    font-family: 'Ubuntu' sans-serif;
+    padding: 4rem;
+}

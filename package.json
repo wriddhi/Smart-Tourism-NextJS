@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "create-next-app": "^12.1.0"
+  },
+  "license": "MIT"
+}
