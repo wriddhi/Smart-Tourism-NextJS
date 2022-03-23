@@ -49,7 +49,6 @@ function Input() {
 
   const clearSearch = () => {
     setQuery(query='')
-    context.updateSearch(query)
   }
 
   return (

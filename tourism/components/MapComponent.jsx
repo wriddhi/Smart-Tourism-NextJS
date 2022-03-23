@@ -61,10 +61,10 @@ function WebMap() {
   return (
     <div className={styles.mapcontainer}>
       <div className={styles.btns}>
-        <button className={`${styles.btn} ${styles.active}`} onClick={() => setMapState('hybrid')}>Satellite</button>
-        <button className={styles.btn} onClick={() => setMapState('streets-vector')}>Streets</button>
-        <button className={styles.btn} onClick={() => setMapState('dark-gray-vector')}>Topographic</button>
-        <button className={styles.btn} onClick={() => setMapState('oceans')}>Oceans</button>
+        <button className={mapState=='hybrid'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('hybrid')}>Satellite</button>
+        <button className={mapState=='streets-vector'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('streets-vector')}>Streets</button>
+        <button className={mapState=='dark-gray-vector'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('dark-gray-vector')}>Topographic</button>
+        <button className={mapState=='oceans'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('oceans')}>Oceans</button>
       </div>
       <div className={styles.map} ref={MapEl}/>
     </div>

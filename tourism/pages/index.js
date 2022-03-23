@@ -12,8 +12,8 @@ import AppContext from '../components/AppContext'
 
 export default function Home() {
 
-  const [query, setQuery] = useState(() => "Kolkata")
-  const [center, SetCenter] = useState(() => [88.37, 22.55])
+  const [query, setQuery] = useState(() => "Delhi")
+  const [center, SetCenter] = useState(() => [77.1025, 28.7041])
   const [results, setResults] = useState({lat: '', lon: '', dt: '', min_temp: '', max_temp: '', temp: '', country: '', main: ''})
 
   const updateResults = (lat, lon, dt, temp_min, temp_max, temp, country, main) => {

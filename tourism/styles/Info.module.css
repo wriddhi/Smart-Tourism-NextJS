@@ -102,6 +102,8 @@
     transition: color 0.15s ease;
     user-select: none ;
 
+    width: 30%;
+
     display: grid;
     place-items: center;
 }
