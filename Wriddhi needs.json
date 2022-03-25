@@ -1,0 +1,142 @@
+[
+	{
+		"State_name" : "Uttar Pradesh",
+		"crops" : "Rice, Cotton, Jute, Sugarcane, Arhar, Bajra"
+	},
+	{
+		"State_name" : "Maharashtra",
+		"crops" : "Rice, Jowar, Bajara, Wheat, Tur"
+	},
+	{
+		"State_name" : "Bihar",
+		"crops" : "Paddy, Wheat, Maize, Pulses"
+	},
+	{
+		"State_name" : "West Bengal",
+		"crops" : "Rice, Pulses, Oil seeds, Wheat, Barley"
+	},
+	{
+		"State_name" : "Andhra Pradesh",
+		"crops" : "Rice, Sugarcane, Cotton, Chilli pepper, Mango"
+	},
+	{
+		"State_name" : "Madhya Pradesh",
+		"crops" : "Paddy, Wheat, Gram, Tur, Urad"
+	},
+	{
+		"State_name" : "Tamil Nadu",
+		"crops" : "Rice, Jowar, Ragi, Bajra, Maize"
+	},
+	{
+		"State_name" : "Rajasthan",
+		"crops" : "Wheat, Jau, Jwar, Bajra, Maize"
+	},
+	{
+		"State_name" : "Karnataka",
+		"crops" : "Rice, Maize, Pulses, Oil seeds, Sugarcane"
+	},
+	{
+		"State_name" : "Gujarat",
+		"crops" : "Cotton, Groundnut, Sesamum, Castor, Paddy"
+	},
+	{
+		"State_name" : "Orissa",
+		"crops" : "Rice, Pulses, Oil seeds, Jute, Coconut"
+	},
+	{
+		"State_name" : "Kerala",
+		"crops" : "Rubber, Coconut, Arecanut, Tapioca, Coffee"
+	},
+	{
+		"State_name" : "Jharkhand",
+		"crops" : "Paddy, Maize, Pulses, Sunflower, Groundnut"
+	},
+	{
+		"State_name" : "Assam",
+		"crops" : "Sugarcane, Tea, Rice, Various Vegetables, Jute"
+	},
+	{
+		"State_name" : "Punjab",
+		"crops" : "Rice, Cotton, Sugarcane, Pearl millet, Maize"
+	},
+	{
+		"State_name" : "Chhattisgarh",
+		"crops" : "Paddy, Maize, Jowar, Groundnut, Gram"
+	},
+	{
+		"State_name" : "Haryana",
+		"crops" : "Rice, Jowar, Bajra, Maize, Wheat"
+	},
+	{
+		"State_name" : "Delhi",
+		"crops" : "Rice, Wheat, Jowar, Pulses, Jute"
+	},
+	{
+		"State_name" : "Jammu and Kashmir",
+		"crops" : "Rice, Maize, Wheat, Pulses, Fodder"
+	},
+	{
+		"State_name" : "Uttarakhand",
+		"crops" : "Rice, Wheat, Sugarcane, Maize, Soyabean"
+	},
+	{
+		"State_name" : "Himachal Pradesh",
+		"crops" : "Wheat, Maize, Rice, Barley, Seed-potato"
+	},
+	{
+		"State_name" : "Tripura",
+		"crops" : "Rice, Jackfruit, Pineapple, Potato, Sugarcane"
+	},
+	{
+		"State_name" : "Meghalaya",
+		"crops" : "Rice, Maize, Orange, Lemon, Pineapple"
+	},
+	{
+		"State_name" : "Manipur",
+		"crops" : "Sugarcane, Oilseeds, Maize, Potatoes, Pulses"
+	},
+	{
+		"State_name" : "Nagaland",
+		"crops" : "Rice, Corn, Millets, Pulses, Oilseeds"
+	},
+	{
+		"State_name" : "Goa",
+		"crops" : "Ragi, Maize, Jowar, Bajra, Pulses"
+	},
+	{
+		"State_name" : "Arunachal Pradesh",
+		"crops" : "Rice, Maize, Millet, Potato, Ginger"
+	},
+	{
+		"State_name" : "Puducherry",
+		"crops" : "Banana, Turmeric, Ginger, ladies' fingers, Brinjal"
+	},
+	{
+		"State_name" : "Mizoram",
+		"crops" : "Ricebean, Maize, Paddy, Cowpea, Soyabean"
+	},
+	{
+		"State_name" : "Chandigarh",
+		"crops" : "Maize, Vegetables, Paddy, Wheat"
+	},
+	{
+		"State_name" : "Sikkim",
+		"crops" : "Wheat, Paddy, Maize, Barley, Buck wheat"
+	},
+	{
+		"State_name" : "Andaman and Nicobar Islands",
+		"crops" : "Pulse, Mango, Sapota, Orange, Banana"
+	},
+	{
+		"State_name" : "Dadra and Nagar Haveli",
+		"crops" : "Paddy, Nagli, Ragi, Jowar, Maize"
+	},
+	{
+		"State_name" : "Daman and Diu",
+		"crops" : "Rice, Ragi, Pulses, Beans, Bajra"
+	},
+	{
+		"State_name" : "Lakshadweep",
+		"crops" : "Coconut, Arecanut, Rice, Brinjal, Pulses"
+	}
+]
