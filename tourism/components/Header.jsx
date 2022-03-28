@@ -7,7 +7,6 @@ function Header() {
   const context = useContext(AppContext)
 
   const handleMenu = () => {
-    console.log(context.menu)
     if(context.menu){
       context.updateMenu('hide')
     }else{
@@ -18,7 +17,7 @@ function Header() {
   return (
     <>    
       <section className={headerstyles.header}>
-        <div className={headerstyles.hamMenuBtn} onClick={handleMenu}>
+        <div className={context.menu? `${headerstyles.hamMenuBtn} ${headerstyles.show}`: `${headerstyles.hamMenuBtn} ${headerstyles.hide}`} onClick={handleMenu}>
           <div className={headerstyles.top}></div>
           <div className={headerstyles.mid}></div>
           <div className={headerstyles.low}></div>

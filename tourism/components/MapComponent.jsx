@@ -14,7 +14,7 @@ function WebMap() {
 
   let view;
 
-  useEffect(() => {console.log(mapState)}, [mapState])
+  // useEffect(() => {console.log(mapState)}, [mapState])
   
   useEffect(() => {
     loadModules(["esri/views/MapView", "esri/WebMap", 'esri/widgets/Search', 'esri/widgets/Zoom', 'esri/geometry/Point'],{

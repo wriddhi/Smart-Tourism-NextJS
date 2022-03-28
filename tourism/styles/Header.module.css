@@ -31,14 +31,14 @@
     transition: transform 0.2s linear;
 }
 
-.hamMenuBtn:hover .top{
+.show .top{
     transform: rotate(45deg) translate(22%, 200%);
 }
 
-.hamMenuBtn:hover .mid{
+.show .mid{
     transform: scale(0) translateX(20%);
 }
-.hamMenuBtn:hover .low{
+.show .low{
     transform: rotate(-45deg) translate(22%, -200%);
 }
 

@@ -63,7 +63,7 @@ function Info() {
           <div className={infostyles.card}>
               {context.results.temp>20? <div className={infostyles.warm}></div>: <div className={`${infostyles.cold}`}></div>}
               {/* <div className={infostyles.img}></div> */}
-              <h3 className={infostyles.title}>{context.query}, {context.results.country} {console.log(context.results.name)}</h3>
+              <h3 className={infostyles.title}>{context.query}, {context.results.country}</h3>
               <span className={infostyles.small}>{showdate}</span>
               <p className={infostyles.mid}>{context.results.main}</p>
               <h1 className={infostyles.large}>{context.results.temp}°C</h1>

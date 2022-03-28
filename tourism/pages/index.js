@@ -14,7 +14,7 @@ import Menu from '../components/Menu'
 
 export default function Home() {
 
-  const [menu, showMenu] = useState(() => true)
+  const [menu, showMenu] = useState(() => false)
   const [query, setQuery] = useState(() => "Delhi")
   const [center, SetCenter] = useState(() => [77.1025, 28.7041])
   const [results, setResults] = useState({name: '', lat: '', lon: '', dt: '', min_temp: '', max_temp: '', temp: '', country: '', main: ''})
