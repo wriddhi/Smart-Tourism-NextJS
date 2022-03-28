@@ -10,17 +10,19 @@ import Info from '../components/InfoComponent'
 import Header from '../components/Header'
 import Agriculture from '../components/Agriculture'
 import AppContext from '../components/AppContext'
+import Menu from '../components/Menu'
 
 export default function Home() {
 
+  const [menu, showMenu] = useState(() => true)
   const [query, setQuery] = useState(() => "Delhi")
   const [center, SetCenter] = useState(() => [77.1025, 28.7041])
-  const [results, setResults] = useState({lat: '', lon: '', dt: '', min_temp: '', max_temp: '', temp: '', country: '', main: ''})
+  const [results, setResults] = useState({name: '', lat: '', lon: '', dt: '', min_temp: '', max_temp: '', temp: '', country: '', main: ''})
 
-  const updateResults = (lat, lon, dt, temp_min, temp_max, temp, country, main) => {
+  const updateResults = (name, lat, lon, dt, temp_min, temp_max, temp, country, main) => {
 
     setResults({
-      ...results,
+      name: name,
       lat: lat, 
       lon: lon,
       dt: dt,
@@ -39,6 +41,14 @@ export default function Home() {
     SetCenter(center = [lon, lat])
   }
 
+  const updateMenu = (state) => {
+    if(state ==='show'){
+      showMenu(true)
+    }else{
+      showMenu(false)
+    }
+  }
+
   const userSettings = {
     query: query,
     setQuery,
@@ -49,6 +59,9 @@ export default function Home() {
     results,
     setResults,
     updateResults,
+    menu,
+    showMenu,
+    updateMenu
   }
 
   return (
@@ -58,12 +71,13 @@ export default function Home() {
       </Head>
       {/* <Script src="https://js.arcgis.com/4.22/"></Script> */}
       <Header/>
+      <Menu/>
       <Input/>
       <main className={styles.maingrid}>
         <Map/>
         <Info/>
+        <Agriculture/>
       </main>      
-      <Agriculture/>
     </AppContext.Provider>
   )
 }

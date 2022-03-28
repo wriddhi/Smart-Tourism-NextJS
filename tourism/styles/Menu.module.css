@@ -1,0 +1,40 @@
+.menu{
+    position: absolute;
+    top: 10%;
+    left: 0;
+    width: 30%;
+    height: 90vh;
+    z-index: 100;
+    background: #eaeaea;
+    border: 1px solid red;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+}
+
+.show{
+    transition: transform 0.2s linear;
+}
+
+.hide{
+    transition: transform 0.2s linear;
+    transform: translateX(-150%);
+}
+
+@media screen and (max-width: 1144px) and (min-width: 601px){
+    .menu{
+        grid-column: span 1;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .menu{
+        height: 100%;
+        width: 100vw;
+    }
+}

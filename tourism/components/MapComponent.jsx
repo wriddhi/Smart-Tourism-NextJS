@@ -13,6 +13,8 @@ function WebMap() {
   const [mapState, setMapState] = useState('dark-gray-vector')
 
   let view;
+
+  useEffect(() => {console.log(mapState)}, [mapState])
   
   useEffect(() => {
     loadModules(["esri/views/MapView", "esri/WebMap", 'esri/widgets/Search', 'esri/widgets/Zoom', 'esri/geometry/Point'],{
@@ -39,31 +41,30 @@ function WebMap() {
         position: "top-right",
         index: 2
       });
-    }, [context.center])
+    })
 
     
-    return () => {
-      // close the map view
-      if(!!view){
-        view.destroy()
-        view = null
-      }
-    }
-  })
+    // return () => {
+    //   // close the map view
+    //   if(!!view){
+    //     view.destroy()
+    //     view = null
+    //   }
+    // }
+  }, [context.results, context.center, mapState])
   
-  
-  const updateCenter = (lat, lon) => {
-    view.goTo({
-      center: [lon, lat]
-    })
-  }
+  // const updateCenter = (lat, lon) => {
+  //   view.goTo({
+  //     center: [lon, lat]
+  //   })
+  // }
 
   return (
     <div className={styles.mapcontainer}>
       <div className={styles.btns}>
+        <button className={mapState=='dark-gray-vector'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('dark-gray-vector')}>Topographic</button>
         <button className={mapState=='hybrid'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('hybrid')}>Satellite</button>
         <button className={mapState=='streets-vector'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('streets-vector')}>Streets</button>
-        <button className={mapState=='dark-gray-vector'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('dark-gray-vector')}>Topographic</button>
         <button className={mapState=='oceans'? `${styles.btn} ${styles.active}`: `${styles.btn}`} onClick={() => setMapState('oceans')}>Oceans</button>
       </div>
       <div className={styles.map} ref={MapEl}/>

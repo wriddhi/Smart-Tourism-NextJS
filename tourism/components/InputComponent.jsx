@@ -7,7 +7,7 @@ import inputstyles from '../styles/Input.module.css'
 
 import AppContext from "./AppContext";
 
-function Input() {
+const Input = () => {
 
   const context = useContext(AppContext)
 
@@ -19,7 +19,7 @@ function Input() {
   } = useSpeechRecognition();
 
   if (!browserSupportsSpeechRecognition) {
-    console.log('Browser doesnt support speech recognition')
+    console.error('Browser doesnt support speech recognition')
   }
 
   // state to control how input box is managed
@@ -42,10 +42,11 @@ function Input() {
     setQuery(query = e.target.value)
   }
 
-  const handleToggle = () => {
-    SpeechRecognition.startListening
-    setActive(!isActive);
-  };
+  useEffect(() => {
+    setQuery(query = transcript)
+    resetTranscript
+  }, [transcript])
+  
 
   const clearSearch = () => {
     setQuery(query='')
@@ -60,12 +61,9 @@ function Input() {
             <div className={`${inputstyles.searchBarBtn} ${inputstyles.cancelBtn}`} onClick={(event) => {resetTranscript; clearSearch(event)}}>
               <BsXLg/>
             </div>
-            {/* <div className={`${inputstyles.searchBarBtn} ${inputstyles.sendBtn}`} onClick={resetTranscript}>
-            <BiPlay/>
-            </div> */}
           </span>
         </section>
-        <button className={`${inputstyles.micContainer} ${isActive? inputstyles.blink: null}`} onClick={handleToggle}>
+        <button className={`${inputstyles.micContainer} ${listening? inputstyles.blink: ''}`} onClick={listening? SpeechRecognition.stopListening: SpeechRecognition.startListening}>
           <BsFillMicFill/>
         </button>
       </section>

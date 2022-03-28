@@ -1,21 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import headerstyles from '../styles/Header.module.css'
+import AppContext from './AppContext'
 
 function Header() {
-  return (
-    <>
-        <style jsx>{`
-            .header{
-                width: 100%;
-                display: grid;
-                place-items: center;
-                font-size: 2rem;
-                font-weight: bold;
-                padding: 1rem;
-                background: #eaeaea;
-            }
 
-        `}</style>
-        <section className='header'>Smart Tourism</section>
+  const context = useContext(AppContext)
+
+  const handleMenu = () => {
+    console.log(context.menu)
+    if(context.menu){
+      context.updateMenu('hide')
+    }else{
+      context.updateMenu('show')
+    }
+  }
+
+  return (
+    <>    
+      <section className={headerstyles.header}>
+        <div className={headerstyles.hamMenuBtn} onClick={handleMenu}>
+          <div className={headerstyles.top}></div>
+          <div className={headerstyles.mid}></div>
+          <div className={headerstyles.low}></div>
+        </div>
+        <span>Smart Tourism</span>
+      </section>
     </>
   )
 }

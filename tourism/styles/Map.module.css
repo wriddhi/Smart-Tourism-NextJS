@@ -1,6 +1,6 @@
 .mapcontainer{
     height: 100%;
-    width: 65%;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -39,4 +39,23 @@
     background: #eaeaea;
     border: none;
     border-bottom: 7px solid black;
+}
+
+@media screen and (max-width: 1144px) and (min-width: 601px){
+    .mapcontainer{
+      grid-column: span 2;
+      height: 500px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mapcontainer{
+        grid-column: span 2;
+        height: 500px;
+    }
+    .btn{
+        font-size: 0.75rem;
+        padding: 0.6rem;
+        border-radius: 10px 10px 0 0;
+    }
 }

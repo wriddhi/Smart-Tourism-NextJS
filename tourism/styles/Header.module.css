@@ -1,0 +1,48 @@
+.header{
+    width: 100%;
+
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 20fr 1fr;
+    padding: 1rem;
+    background: #eaeaea;
+}
+
+.hamMenuBtn {
+    height: 3rem;
+    width: 3rem;
+    padding: 0.2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.top, .mid, .low {
+    height: 5px;
+    width: 95%;
+    background: black;
+    transition: transform 0.2s linear;
+}
+
+.hamMenuBtn:hover .top{
+    transform: rotate(45deg) translate(22%, 200%);
+}
+
+.hamMenuBtn:hover .mid{
+    transform: scale(0) translateX(20%);
+}
+.hamMenuBtn:hover .low{
+    transform: rotate(-45deg) translate(22%, -200%);
+}
+
+.header span {
+    font-size: 2rem;
+    font-weight: bold;
+}

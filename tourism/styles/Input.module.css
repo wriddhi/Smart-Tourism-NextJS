@@ -4,7 +4,7 @@
     align-items: center;
     gap: 2rem;
     width: 80%;
-    margin: 1rem auto;
+    margin: 2rem auto;
 }
 
 .searchContainer{    
@@ -54,11 +54,11 @@
 .cancelBtn {
     font-size: 0.8rem;
 }
-
+/* 
 .sendBtn {
     font-size: 1.8rem;
     padding-left: 2px;
-}
+} */
 
 .micContainer{
     display: grid;
@@ -71,12 +71,33 @@
     cursor: pointer;
     outline: none;
     border: none;
+}
+
+.blink{
+    position: relative;
+    height: 4rem;
+    width: 4rem;
+    user-select: none;
+}
+
+.blink::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 4rem;
+    width: 4rem;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    background: rgba(0, 0, 0,0.2);
+    z-index: -10;
     animation: blink 2s ease-in infinite;
 }
 
 @keyframes blink {
     50%{
-        border: 10px transparent black;
+        height: 5rem;
+        width: 5rem;
     }
 }
 
@@ -85,6 +106,77 @@
     font-size: 1.6rem;
 }
 
-.searchBarBtn[disabled="true"] {
-    display: none;
+@media only screen and (max-width: 1144px) and (min-width: 601px) {
+    .searchContainer{
+        width: 80%;
+    }
 }
+
+@media only screen and (max-width: 600px) {
+
+    .speechContainer{
+        width: 90%;
+        gap: 0.3rem;
+    }
+
+    .searchContainer{
+        width: 90%;
+    }
+    .inputBox{
+        font-size: 0.75rem;
+        padding: 0.75rem;
+    }
+
+    .searchBarBtnsContainer{
+        right: 5px;
+    }
+
+    .blink{
+        position: relative;
+        user-select: none;
+    }
+    
+    .blink::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 3rem;
+        width: 3rem;
+        transform: translate(-50%, -50%);
+        border-radius: 100%;
+        background: rgba(0, 0, 0,0.2);
+        z-index: -10;
+        animation: blink 2s ease-in infinite;
+    }
+    
+    @keyframes blink {
+        50%{
+            height: 3.5rem;
+            width: 3.5rem;
+        }
+    }
+
+    .micContainer, .blink{
+        height: 3rem;
+        width: 3rem;
+        user-select: none;
+    }
+
+    .micContainer *{
+        height: 50%;
+        width: 50%;
+        user-select: none;
+
+    }
+
+    .cancelBtn{
+        font-size: 0.7rem;
+        user-select: none;
+    }
+
+    .cancelBtn *{
+        user-select: none;
+    }
+}
+
